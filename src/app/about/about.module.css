@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  gap: 100px;
+}
+@media (max-width: 768px) {
+  .container {
+    text-align: center;
+    flex-direction: column;
+  }
+}
+.container .content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.container .content h4 {
+  color: var(--btn);
+}
+.container .content .boxes {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .container .content .boxes {
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+.container .content .boxes h3 {
+  color: var(--btn);
+}
+.container .content .boxes p {
+  font-size: 0.8em;
+}
+.container .img {
+  position: relative;
+  flex: 1;
+}/*# sourceMappingURL=about.module.css.map */

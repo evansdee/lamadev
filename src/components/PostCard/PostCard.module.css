@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  margin-bottom: 20px;
+  flex-direction: column;
+  gap: 20px;
+}
+.container .top {
+  display: flex;
+}
+.container .top .imgContainer {
+  position: relative;
+  width: 90%;
+  height: 400px;
+}
+.container .top .imgContainer .img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container .top span {
+  margin: auto;
+  font-size: 12px;
+  transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+}
+.container .bottom h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.container .bottom p {
+  margin-bottom: 20px;
+  font-weight: 300;
+  color: gray;
+  width: 90%;
+}
+.container .bottom a {
+  text-decoration: underline;
+}/*# sourceMappingURL=PostCard.module.css.map */

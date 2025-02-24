@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+  .imgContainer {
+    position: relative;
+    flex: 1;
+    height: 400px;
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  .formContainer {
+    flex: 1;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      button {
+        padding: 20px;
+        border-radius: 5px;
+        background-color: var(--btn);
+        color: var(--text);
+        font-weight: bold;
+        border: none;
+      }
+
+      input,
+      textarea {
+        padding: 10px;
+        border-radius: 5px;
+        outline: none;
+        /* border: 1px solid var(--btn); */
+        border: none;
+        background-color: var(--bgSoft);
+        color: var(--text);
+      }
+    }
+  }
+}

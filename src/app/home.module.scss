@@ -1,0 +1,63 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // gap: 100px;
+
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    // justify-content: space-between;
+    h1 {
+      font-size: 3em;
+
+      @media(max-width:768px){
+        font-size: 64px;
+      }
+    }
+    .btns {
+      display: flex;
+      gap: 0.5em;
+
+      @media(max-width:768px){
+       justify-content: center;
+      }
+      a {
+        background-color: #fff;
+        padding: 0.5em 1em;
+        color: #28282b;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+
+        &:first-of-type {
+          background-color: var(--btn);
+          color: var(--text);
+        }
+      }
+    }
+
+    .brands {
+      width: 500px;
+      height: 50px;
+      position: relative;
+      filter: grayscale(1);
+      -webkit-filter: grayscale(1);
+      @media(max-width:768px){
+        width: 100%;
+      }
+}
+  }
+
+  .imgContainer {
+    position: relative;
+  }
+
+  @media(max-width:1024px){
+    flex-direction: column;
+    text-align: center;
+  }
+}

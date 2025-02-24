@@ -1,0 +1,46 @@
+
+
+.container{
+    display: flex;
+    margin-bottom: 20px;
+    flex-direction:column;
+    gap:20px;
+    .top{
+        display: flex;
+        .imgContainer{
+            position: relative;
+            width: 90%;
+            height: 400px;
+
+            .img{
+                object-fit: cover;
+            }
+        }
+
+        span{
+            margin: auto;
+            font-size: 12px;
+            transform: rotate(270deg);
+            -webkit-transform: rotate(270deg);
+            -moz-transform: rotate(270deg);
+            -ms-transform: rotate(270deg);
+            -o-transform: rotate(270deg);
+}
+    }
+
+    .bottom{
+        h1{
+            font-size:24px;
+            margin-bottom: 20px;
+        }
+        p{
+            margin-bottom: 20px;
+            font-weight: 300;
+            color: gray;
+            width: 90%;
+        }
+        a{
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.container {
+  /* background-color: rgb(7,7,67); */
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container ul {
+  display: flex;
+  gap: 2em;
+}
+@media (max-width: 768px) {
+  .container ul {
+    display: none;
+  }
+}
+.container ul li {
+  text-transform: capitalize;
+  padding: 0.5em 1em;
+}
+.container .menu {
+  display: block;
+  width: 100px;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .container .menu {
+    display: none;
+  }
+}
+
+.menuContainer {
+  width: 50dvw;
+  position: absolute;
+  right: 0;
+  top: 100px;
+  height: calc(100vh - 100px);
+  background-color: rebeccapurple;
+  transition: all 1s ease;
+}
+
+.form {
+  display: flex;
+}
+.form .logout {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 1em;
+  cursor: pointer;
+}/*# sourceMappingURL=navbar.module.css.map */

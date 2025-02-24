@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  gap: 100px;
+
+  @media (max-width: 768px) {
+    text-align: center;
+    flex-direction: column;
+  }
+  .content {
+    h4 {
+      color: var(--btn);
+    }
+
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    .boxes {
+      display: flex;
+      justify-content: space-between;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 50px;
+      }
+      h3 {
+        color: var(--btn);
+      }
+
+      p {
+        font-size: 0.8em;
+      }
+    }
+  }
+  .img {
+    position: relative;
+    flex: 1;
+  }
+}

@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
+.container .imgContainer {
+  position: relative;
+  flex: 1;
+  height: 400px;
+}
+.container .imgContainer img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.container .formContainer {
+  flex: 1;
+}
+.container .formContainer form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container .formContainer form button {
+  padding: 20px;
+  border-radius: 5px;
+  background-color: var(--btn);
+  color: var(--text);
+  font-weight: bold;
+  border: none;
+}
+.container .formContainer form input,
+.container .formContainer form textarea {
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  /* border: 1px solid var(--btn); */
+  border: none;
+  background-color: var(--bgSoft);
+  color: var(--text);
+}/*# sourceMappingURL=contact.module.css.map */

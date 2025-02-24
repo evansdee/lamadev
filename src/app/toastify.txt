@@ -1,0 +1,43 @@
+Common <ToastContainer /> Options
+
+Here are some of the most commonly used options for <ToastContainer />:
+
+    position: Defines where the toast appears on the screen.
+    Options: "top-right", "top-center", "top-left", "bottom-right", "bottom-center", "bottom-left"
+    Example: position="top-center"
+
+    autoClose: The number of milliseconds before the toast automatically closes.
+    Example: autoClose={5000}
+
+    hideProgressBar: If set to true, the progress bar won't be displayed.
+    Example: hideProgressBar={false}
+
+    newestOnTop: If set to true, new toasts appear on top of older ones.
+    Example: newestOnTop={true}
+
+    closeOnClick: If set to true, clicking on the toast will close it.
+    Example: closeOnClick={true}
+
+    rtl: If set to true, displays the toast in right-to-left mode.
+    Example: rtl={false}
+
+    pauseOnFocusLoss: If set to true, auto-closing will pause when the window loses focus.
+    Example: pauseOnFocusLoss={true}
+
+    draggable: Allows the user to drag the toast to dismiss it.
+    Example: draggable={true}
+
+    pauseOnHover: Pauses the autoClose timer when hovering over the toast.
+    Example: pauseOnHover={true}
+
+    <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={true}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />

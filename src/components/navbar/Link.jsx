@@ -7,7 +7,7 @@ import { useState } from "react";
 import { handleLogout } from "@/libs/action";
 
 export default function Links({ session }) {
-  const isAdmin = true;
+  const isAdmin = session?.user?.isAdmin;
 
   const pathName = usePathname();
   const [open, setOpen] = useState(false);

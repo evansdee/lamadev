@@ -34,7 +34,7 @@ export default async function SinglePostPage({ params }) {
 
   const { title, desc, userId, img } = post;
   const { username, email, img: avatar } = await getUser(userId);
-  //   console.log(currentUser);
+    console.log(username);
 
   return (
     <div className={sty.container}>

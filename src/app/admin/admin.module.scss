@@ -1,0 +1,26 @@
+
+
+
+.container{
+    margin-top: 50px;
+    display: flex;
+    gap: 100px;
+    flex-direction: column;
+}
+.row{
+    display: flex;
+    gap: 100px;
+
+    h1{
+        font-size: 2rem;
+        font-weight: 300;
+    }
+}
+.column{
+    flex:1;
+
+    img{
+        object-fit: cover;
+        border-radius: 50%;
+    }
+}

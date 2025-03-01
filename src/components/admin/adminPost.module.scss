@@ -1,0 +1,51 @@
+
+.containerUserForm,.containerPostForm{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    input,textarea,select{
+        padding: 20px;
+        background: var(--bgSoft);
+        border: none;
+        border-radius: 5px;
+        color: var(--textSoft);
+    }
+
+    button{
+        padding: 20px;
+        cursor: pointer;
+        background: var(--btn);
+        border: none;
+        border-radius: 5px;
+        color: var(--textSoft);
+
+        font-weight: bold;
+    }
+}
+
+.post,.user{
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    .details{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+
+      
+    }
+
+    button{
+        padding: 5px 10px;
+        cursor: pointer;
+        background: rgba(220,20,60,0.5);
+        border: none;
+        border-radius: 5px;
+        color: var(--textSoft);
+        font-weight: bold;
+    }
+}

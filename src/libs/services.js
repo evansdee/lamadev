@@ -4,17 +4,17 @@ import { Post, User } from "./models";
 export async function getPosts() {
     
   try {
-    connectToDb();
+    await connectToDb();
     const posts = await Post.find();
     return posts;
   } catch (err) {
-    throw new Error("failed to fetch posts");
+    throw new Error(`failed to fetch posts ${err}`);
   }
 }
 
 export async function getPost(slug) {
   try {
-    connectToDb();
+    await connectToDb();
     const post = await Post.findOne({ slug });
     return post;
   } catch (err) {
@@ -23,7 +23,7 @@ export async function getPost(slug) {
 }
 export async function getUser(id) {
   try {
-    connectToDb();
+    await connectToDb();
     const user = await User.findById(id);
     return user;
   } catch (err) {
@@ -32,10 +32,10 @@ export async function getUser(id) {
 }
 export async function getUsers() {
   try {
-    connectToDb();
+    await connectToDb();
     const users = await User.find();
     return users;
   } catch (err) {
-    throw new Error("failed to fetch users");
+    throw new Error(`failed to fetch users ${err}`);
   }
 }

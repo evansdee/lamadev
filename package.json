@@ -9,13 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tanstack/query-devtools": "^5.65.0",
+    "@tanstack/react-query": "^5.66.9",
+    "@tanstack/react-query-devtools": "^5.66.11",
     "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.7",
     "mongodb": "^6.13.0",
     "mongoose": "^8.10.1",
     "next": "15.1.7",
     "next-auth": "^5.0.0-beta.25",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-hook-form": "^7.54.2",
     "react-toastify": "^11.0.3",
     "styled-jsx": "^5.1.6"
   },

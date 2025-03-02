@@ -1,4 +1,5 @@
 "use client";
+import { deletePost, deleteUser } from "@/libs/action";
 import { getPosts, getUsers } from "@/libs/services";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
@@ -24,17 +25,32 @@ export function useUsers() {
 
 
 
-// export function useDeletePost() {
-//   const queryClient = useQueryClient();
+export function useDeletePost() {
+  const queryClient = useQueryClient();
 
-//   const { mutate, isLoading, isError } = useMutation({
-//     mutationFn: async ({ id }) => {
-//       await deletePost({ id });
-//     },
-//     onSuccess: () => {
-//       queryClient.invalidateQueries(["posts"]); // Refetch posts after deletion
-//     },
-//   });
+  const { mutate, isLoading, isError } = useMutation({
+    mutationFn: async ({ id }) => {
+      await deletePost({ id });
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries(["posts"]); // Refetch posts after deletion
+    },
+  });
 
-//   return { mutate, isLoading, isError };
-// }
+  return { mutate, isLoading, isError };
+}
+
+export function useDeleteUser() {
+  const queryClient = useQueryClient();
+
+  const { mutate, isPending, isError } = useMutation({
+    mutationFn: async ({ id }) => {
+      await deleteUser({ id });
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries(["users"]); // Refetch posts after deletion
+    },
+  });
+
+  return { mutate, isPending, isError };
+}

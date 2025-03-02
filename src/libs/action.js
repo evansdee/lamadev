@@ -4,6 +4,7 @@ import { connectToDb } from "./connectToDB";
 import { Post, User } from "./models";
 import { auth, signIn, signOut } from "./auth";
 import bcrypt from "bcrypt";
+import mongoose from "mongoose";
 
 export const addPost = async (prevState, formData) => {
   const { title, desc, userId, slug,img } = Object.fromEntries(formData);
@@ -69,18 +70,21 @@ export const deletePost = async (formData) => {
   }
 };
 
-export const deleteUser = async (formData) => {
-  const { id } = Object.fromEntries(formData);
+export const deleteUser = async ({id}) => {
+// export const deleteUser = async (formData) => {
+  // const { id } = Object.fromEntries(formData);
 
   try {
     await connectToDb();
+
+    const objectId = new mongoose.Types.ObjectId(id);
     
-    await Post.deleteMany({ userId: id });
-    await User.findByIdAndDelete(id);
+    await Post.deleteMany({ userId: objectId });
+    await User.findByIdAndDelete(objectId);
     const sess= await auth()
-    console.log(sess,"action");
 
     if(id === sess?.user?.id) handleLogout()
+ 
     
     revalidatePath("/admin");
     console.log("deleted from db");
